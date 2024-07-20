@@ -2,7 +2,7 @@ def entry(deposit, dep_term, percent_rate):
     kluch_stavka = 0.16
     platanaloga = 1000000 * kluch_stavka
     itog_deposit = round(((1 + (percent_rate / 1200)) ** dep_term) * deposit, 2)
-    income_sum = round(round(itog_deposit, 2) - float(deposit), 2)
+    income_sum = round(itog_deposit - deposit, 2)
     nalog = 0
     if income_sum > platanaloga:
         nalog = round((income_sum - platanaloga) * 0.13, 2)
